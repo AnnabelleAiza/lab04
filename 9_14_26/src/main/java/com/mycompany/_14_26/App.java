@@ -16,14 +16,14 @@ import javafx.stage.Stage;
  */
 public class App extends Application {
     
-    private TextField numDaysOfTrip;
-    private TextField airfare;
-    private TextField carRentalFees;
-    private TextField numMilesDriven;
-    private TextField parkingFees;
-    private TextField taxiCharges;
-    private TextField conferenceFees;
-    private TextField lodgingFeesPerNight;
+    TextField numDaysOfTrip = new TextField();
+    TextField airfare = new TextField();
+    TextField carRentalFees = new TextField();
+    TextField numMilesDriven = new TextField();
+    TextField parkingFees = new TextField();
+    TextField taxiCharges = new TextField();
+    TextField conferenceFees = new TextField();
+    TextField lodgingFeesPerNight = new TextField();
     
     private double mealExpense = 37.00;
     private double parkingFeeExpense = 10.00;
@@ -31,10 +31,10 @@ public class App extends Application {
     private double logingChargesExpense = 95.00;
     private double drivingExpense = 0.27;
     
-    private Label buisnessTripExpenses;
-    private Label totalAllowableExpenses;
-    private Label excessExpenses;
-    private Label amountSaved;
+    Label buisnessTripExpenses = new Label();
+    Label totalAllowableExpenses = new Label();
+    Label excessExpenses = new Label();
+    Label amountSaved = new Label();
 
     @Override
     public void start(Stage stage) {
@@ -51,14 +51,12 @@ public class App extends Application {
         grid.add(airfare, 1, 1);
         grid.add(new Label("Car rental fees:"), 0, 2);
         grid.add(carRentalFees, 1, 2);
-        grid.add(new Label("Was a private vehicule used:"), 0, 3);
-        grid.add(numDaysOfTrip, 1, 3);//
-        grid.add(new Label("Miles driven with private vehicule:"), 0, 4);
-        grid.add(numMilesDriven, 1, 4);
-        grid.add(new Label("Parking fees:"), 0, 5);
-        grid.add(parkingFees, 1, 5);
-        grid.add(new Label("Taxi charges:"), 0, 6);
-        grid.add(taxiCharges, 1, 6);
+        grid.add(new Label("Miles driven with private vehicule:"), 0, 3);
+        grid.add(numMilesDriven, 1, 3);
+        grid.add(new Label("Parking fees:"), 0, 4);
+        grid.add(parkingFees, 1, 4);
+        grid.add(new Label("Taxi charges:"), 0, 5);
+        grid.add(taxiCharges, 1, 5);
         grid.add(new Label("Conference registration fees:"), 0, 7);
         grid.add(conferenceFees, 1, 7);
         grid.add(new Label("Lodging charges per night"), 0, 8);
